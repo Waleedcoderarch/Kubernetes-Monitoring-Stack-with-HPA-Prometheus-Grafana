@@ -1,81 +1,63 @@
-🚀 Kubernetes Monitoring Stack with HPA, Prometheus & Grafana
+<h1>🚀 Kubernetes Monitoring Stack with HPA, Prometheus & Grafana</h1>
 
 This project demonstrates how to deploy an application in Kubernetes, configure Horizontal Pod Autoscaling (HPA), and monitor the cluster using Prometheus and Grafana installed through Helm.
 
-The purpose of this project is to build a simple observability and autoscaling setup for Kubernetes workloads, enabling better visibility into cluster performance and automated scaling based on resource usage.
+The goal of this project is to build a simple observability and autoscaling setup for Kubernetes workloads.
 
-📖 Project Overview
+<h3>📌 Project Overview</h3>
+<hr>
+In this project, an Nginx application was deployed on Kubernetes using a Deployment resource.
 
-In this practical implementation, an Nginx application was deployed on Kubernetes using a Deployment resource.
+CPU resource requests and limits were configured so that Kubernetes could monitor resource usage and scale the application when necessary.
 
-CPU resource requests and limits were configured so Kubernetes could monitor resource utilization and scale the application when required.
+A Horizontal Pod Autoscaler (HPA) was then configured to automatically scale pods based on CPU utilization.
 
-A Horizontal Pod Autoscaler (HPA) was then configured to automatically scale the number of pods based on CPU utilization.
+To monitor the cluster and workloads, Prometheus and Grafana were installed using the kube-prometheus-stack Helm chart.
 
-To monitor the Kubernetes cluster and application workloads, Prometheus and Grafana were installed using the kube-prometheus-stack Helm chart.
+Prometheus collects metrics from the Kubernetes cluster
 
-Prometheus collects metrics from Kubernetes components and workloads.
+Grafana visualizes these metrics using interactive dashboards
 
-Grafana visualizes these metrics through interactive dashboards.
+This setup helps monitor cluster performance and workload behavior in real time.
 
-This setup provides insights into cluster health and application performance.
+<h3>📊 Monitoring Dashboard</h3>
+<hr>
+The Grafana dashboard provides real-time visibility into the Kubernetes cluster.
 
-📊 Monitoring Dashboard
+It allows monitoring of important metrics such as:
 
-Grafana dashboards provide real-time visibility into the Kubernetes cluster.
+✔ Node CPU Usage
+✔ Node Memory Usage
+✔ Network Traffic
+✔ Pod Metrics
+✔ Cluster Resource Utilization
 
-These dashboards allow monitoring of key infrastructure metrics such as:
 
-Node CPU Usage
+<img width="1507" height="770" alt="Screenshot 2026-03-05 014640" src="https://github.com/user-attachments/assets/0d4acc07-db22-4773-9dab-6da1a8e8ed77" />
+<hr>
 
-Node Memory Usage
+<img width="1515" height="853" alt="Screenshot 2026-03-05 014620" src="https://github.com/user-attachments/assets/18c82e1b-2b38-491f-a302-edcc0dd9d937" />
 
-Network Traffic
+<hr>
+<h3>🎯 Key Learnings</h3>
 
-Pod Metrics
+Through this project, I gained hands-on experience with:
 
-Cluster Resource Utilization
+• Deploying applications in Kubernetes
+• Configuring Horizontal Pod Autoscaling (HPA)
+• Installing tools using Helm
+• Monitoring Kubernetes clusters with Prometheus
+• Visualizing metrics with Grafana dashboards
+• Troubleshooting Kubernetes service exposure issues
+<hr>
 
-These metrics help in understanding cluster performance and identifying potential bottlenecks.
+<h3>✅ Conclusion</h3>
 
-(Dashboard screenshots can be added below)
+This project demonstrates a simple Kubernetes monitoring and autoscaling setup using Prometheus and Grafana.
 
-/screenshots/dashboard1.png
-/screenshots/dashboard2.png
-🏗️ Architecture
-Application Deployment (nginx)
-        │
-        │
-Metrics Server
-        │
-        │
-Horizontal Pod Autoscaler
-        │
-        │
-Prometheus (Metrics Collection)
-        │
-        │
-Grafana (Metrics Visualization)
-🎯 Key Learnings
+It provides better visibility into cluster performance while enabling automatic scaling of workloads based on resource utilization.
 
-Through this project, the following concepts were implemented and learned:
+This type of monitoring setup is essential for running reliable and scalable cloud-native applications.
 
-Deploying applications in Kubernetes
 
-Configuring Horizontal Pod Autoscaling (HPA)
 
-Installing applications using Helm
-
-Monitoring Kubernetes clusters with Prometheus
-
-Visualizing metrics using Grafana dashboards
-
-Troubleshooting service exposure issues in Kubernetes
-
-✅ Conclusion
-
-This project demonstrates a basic Kubernetes monitoring and autoscaling setup using Prometheus and Grafana.
-
-It enables better visibility into cluster performance while allowing Kubernetes to automatically scale workloads based on resource utilization.
-
-Such monitoring and observability setups are essential for maintaining reliable and scalable cloud-native applications.
